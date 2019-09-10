@@ -52,8 +52,8 @@
             "buildsystem": "meson",
             "sources": [{
                 "type": "archive",
-                "url": "https://gitlab.gnome.org/World/design/contrast/uploads/c69c4bac5fab625dfe214042406bd7ea/contrast-0.0.1.tar.xz",
-                "sha256": "14cab145a579e7f424471559ae5c0988232f2c4bbb8d06348fa765e70a305dfb"
+                "url": "https://gitlab.gnome.org/World/design/contrast/uploads/77620d35c0310ac7bbc75e32a8a8c413/contrast-0.0.2.tar.xz",
+                "sha256": "ffcdffba8bbd437f60ebc98e45d055d61f29bb2f389c64004dc29dd3d8b7bed6"
             }]
         }
     ]
