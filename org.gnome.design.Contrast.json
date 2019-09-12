@@ -12,7 +12,8 @@
         "--socket=x11",
         "--socket=wayland",
         "--device=dri",
-        "--talk-name=org.gnome.Shell.Screenshot"
+        "--talk-name=org.gnome.Shell.Screenshot",
+        "--metadata=X-DConf=migrate-path=/org/gnome/design/Contrast/"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
