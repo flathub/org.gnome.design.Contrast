@@ -9,7 +9,7 @@
     "command": "contrast",
     "finish-args": [
         "--share=ipc",
-        "--socket=fallack-x11",
+        "--socket=fallback-x11",
         "--socket=wayland",
         "--device=dri",
         "--talk-name=org.gnome.Shell.Screenshot",
