@@ -9,7 +9,7 @@
     "command": "contrast",
     "finish-args": [
         "--share=ipc",
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--socket=wayland",
         "--device=dri",
         "--talk-name=org.gnome.Shell.Screenshot",
@@ -40,8 +40,8 @@
             "sources": [{
                 "type": "git",
                 "url": "https://source.puri.sm/Librem5/libhandy.git",
-                "tag": "v0.0.10",
-                "commit": "2d777677352d037b6f5cc24d9c1c8d9a74ac0ded"
+                "tag": "v0.0.13",
+                "commit": "7a193d7692c9c76a1a94f17c4d30b585f77d177c"
             }]
         },
         {
@@ -49,8 +49,8 @@
             "buildsystem": "meson",
             "sources": [{
                 "type": "archive",
-                "url": "https://gitlab.gnome.org/World/design/contrast/uploads/77620d35c0310ac7bbc75e32a8a8c413/contrast-0.0.2.tar.xz",
-                "sha256": "ffcdffba8bbd437f60ebc98e45d055d61f29bb2f389c64004dc29dd3d8b7bed6"
+                "url": "https://gitlab.gnome.org/World/design/contrast/uploads/901c5ca1cb0454e585ed095ee172f508/contrast-0.0.3.tar.xz",
+                "sha256": "656c006bd0dd2b1108321753af61fd6406d91eb864d1a65ba5bc8ef3ba94a45d"
             }]
         }
     ]
