@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.design.Contrast",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "40",
+    "runtime-version": "41",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -12,45 +12,63 @@
         "--socket=fallback-x11",
         "--socket=wayland",
         "--device=dri",
-        "--talk-name=org.gnome.Shell.Screenshot",
         "--metadata=X-DConf=migrate-path=/org/gnome/design/Contrast/"
     ],
     "build-options": {
-        "append-path": "/usr/lib/sdk/rust-stable/bin",
-        "env": {
-            "CARGO_HOME": "/run/build/contrast/cargo"
-        }
+        "append-path": "/usr/lib/sdk/rust-stable/bin"
     },
-    "modules": [{
-            "name": "libhandy",
-            "buildsystem": "meson",
+    "modules": [
+        {
+            "name" : "libadwaita",
+            "buildsystem" : "meson",
             "config-opts": [
                 "-Dintrospection=disabled",
                 "-Dgtk_doc=false",
                 "-Dtests=false",
                 "-Dexamples=false",
-                "-Dvapi=false",
-                "-Dglade_catalog=disabled"
+                "-Dvapi=false"
             ],
             "cleanup": [
                 "/include",
-                "/lib/pkgconfig",
-                "/bin"
+                "/lib/pkgconfig"
             ],
-            "sources": [{
+            "sources" : [{
                 "type": "git",
-                "url": "https://gitlab.gnome.org/GNOME/libhandy.git",
-                "tag": "v0.0.13",
-                "commit": "7a193d7692c9c76a1a94f17c4d30b585f77d177c"
-            }]
+                "url": "https://gitlab.gnome.org/GNOME/libadwaita.git",
+                "tag": "1.0.0.alpha.3"
+            }],
+            "modules": [
+                {
+                    "name" : "libsass",
+                    "buildsystem" : "meson",
+                    "cleanup": ["*"],
+                    "sources" : [{
+                        "type" : "git",
+                        "url" : "https://github.com/lazka/libsass.git",
+                        "branch" : "meson",
+                        "commit": "302397c0c8ae2d7ab02f45ea461c2c3d768f248e"
+                    }]
+                },
+                {
+                    "name" : "sassc",
+                    "buildsystem" : "meson",
+                    "cleanup": ["*"],
+                    "sources" : [{
+                        "type" : "git",
+                        "url" : "https://github.com/lazka/sassc.git",
+                        "branch" : "meson",
+                        "commit": "82803377c33247265d779af034eceb5949e78354"
+                    }]
+                }
+            ]
         },
         {
             "name": "contrast",
             "buildsystem": "meson",
             "sources": [{
                 "type": "archive",
-                "url": "https://gitlab.gnome.org/World/design/contrast/uploads/901c5ca1cb0454e585ed095ee172f508/contrast-0.0.3.tar.xz",
-                "sha256": "656c006bd0dd2b1108321753af61fd6406d91eb864d1a65ba5bc8ef3ba94a45d"
+                "url": "https://gitlab.gnome.org/World/design/contrast/uploads/00d931abdb274d7410de7c0a68dad3e9/contrast-0.0.4.tar.xz",
+                "sha256": "5e6c372caee9c0eb2bca704bd031245e390da1bbcf558cf7c110fb9e428f7a8f"
             }]
         }
     ]
