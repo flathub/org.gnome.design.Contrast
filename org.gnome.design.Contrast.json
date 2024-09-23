@@ -1,7 +1,7 @@
 {
     "id": "org.gnome.design.Contrast",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "45",
+    "runtime-version": "47",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -23,8 +23,8 @@
             "buildsystem": "meson",
             "sources": [{
                 "type": "archive",
-                "url": "https://gitlab.gnome.org/World/design/contrast/uploads/23b9cf42e16630f0eab2eeb1686eb25b/contrast-0.0.10.tar.xz",
-                "sha256": "8468d767a4630e51ee73062c9a174b105077cfdbfd32eedad23fa1aea0acb268"
+                "url": "https://gitlab.gnome.org/-/project/8128/uploads/06d276a9bf45f81a548c4dcefb27437d/contrast-0.0.11.tar.xz",
+                "sha256": "b217c4433be6e6f97e20f63a27dcdcfe4098a0ba083c036772ba6cd2eb4569a6"
             }]
         }
     ]
